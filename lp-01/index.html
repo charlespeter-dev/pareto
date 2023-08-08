@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.2xcode.dev/MuseoSans/font.css">
+    <link rel="stylesheet" href="https://paretohealth.com/wp-content/themes/pareto/custom.css">
+    <link rel="stylesheet" id="site_main_css-css"
+        href="https://paretohealth.com/wp-content/themes/pareto/css/build/main.min.193d891485af305afc3a.css"
+        type="text/css" media="all">
+    <link rel="stylesheet" href="https://use.typekit.net/wqr5pkt.css">
+
+    <style>
+        .header {
+            height: unset;
+        }
+
+        .header .nav-link.social-link img {
+            visibility: hidden;
+        }
+
+        .header .top-nav {
+            height: 30px;
+        }
+
+        .header .top-nav .nav {
+            padding: 0;
+        }
+
+        .header .main-nav .navbar {
+            padding: 0;
+            color: #FFF;
+            font-size: 17px;
+            line-height: 20px;
+
+            position: relative;
+            top: unset;
+            right: unset;
+            left: unset;
+            z-index: unset;
+        }
+
+        @media (max-width: 992px) {
+
+            .header .navbar .navbar-brand {
+                padding-top: 0.3125rem;
+                padding-bottom: 0.3125rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .small-hero .background-image {
+                background-position: 100% 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .small-hero .hero_content {
+                padding-top: 190px;
+            }
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        h2 {
+            font-size: 28px;
+            line-height: 38px;
+        }
+
+        .bbox {
+            padding-block: 1rem;
+        }
+
+        .bbox p {
+            line-height: 28px;
+            margin: 0;
+        }
+
+        .bbox p strong {
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
+
+        .solid-line-1 {
+            display: block;
+            border-bottom: 2px solid #4E8C95;
+            padding-block-start: 1rem;
+        }
+
+        .solid-line-2 {
+            display: block;
+            border-bottom: 2px solid #00FCC7;
+            padding-block-start: 1rem;
+        }
+
+        .solid-line-3 {
+            display: block;
+            border-bottom: 2px solid #8DDD64;
+            padding-block-start: 1rem;
+        }
+
+        .dark-thumbnail {
+            background-color: #101F4F;
+            color: #FFF;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px 10px #00000030;
+        }
+
+        .dark-thumbnail p {
+            font-size: 24px;
+            line-height: 34px;
+        }
+
+        .dark-thumbnail .btn.btn-green {
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: 900;
+        }
+
+        @media screen and (min-width: 992px) {
+            .btn.btn-green {
+                min-width: 333px;
+            }
+        }
+
+        .video-modal h2 {
+            font-size: 34px;
+            line-height: 46px;
+            margin: 0;
+        }
+
+        .video-modal p {
+            font-size: 18px;
+            line-height: 28px;
+            margin: 0;
+        }
+
+        .video-modal .video-popup-trigger {
+            cursor: pointer;
+        }
+
+        .video-modal .bi.bi-play-circle {
+            color: #00ECCB;
+            width: 60px;
+            height: 60px;
+        }
+
+        @media screen and (min-width: 992px) {
+            .video-modal .bi.bi-play-circle {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .video-modal #capsule-video iframe {
+            width: 100%;
+        }
+
+        .modal-dialog {
+            max-width: unset;
+            margin-inline: 1rem;
+        }
+
+        @media (min-width: 992px) {
+            .modal-dialog {
+                max-width: 675px;
+                margin: 1.75rem auto;
+            }
+        }
+
+        .modal-body {
+            text-align: center;
+        }
+
+        .instruction .bbox {
+            margin-block-end: 2rem;
+        }
+
+        /*
+        .instruction .bbox:last-child {
+            margin-block-end: 0;
+        } 
+
+        @media screen and (min-width: 992px) {
+            .instruction .bbox {
+                min-height: 200px;
+            }
+        } */
+
+        .instruction .bbox p {
+            margin-bottom: .5rem;
+        }
+
+        .instruction .bbox p strong.subheading {
+            font-size: 28px;
+            line-height: 33px;
+        }
+
+        .faq .sub-title {
+            font-size: 34px;
+            line-height: 46px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .faq .sub-title {
+                text-align: center;
+            }
+        }
+
+        .faq .faq-link {
+            color: #FFF;
+            text-decoration: underline;
+            display: inline-block;
+            width: 333px;
+            text-align: center;
+        }
+
+        .faq .faq-link:hover {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .half_column_with_image .bg-small {
+            position: relative;
+            z-index: unset;
+            bottom: unset;
+            right: unset;
+        }
+
+        @media (max-width: 768px) {
+            .half_column_with_image {
+                padding-bottom: 0;
+            }
+        }
+
+        .bottom-logo {
+            text-align: center;
+        }
+
+        .lp-footer {
+            background: transparent linear-gradient(-90deg, #12adc3 1%, #0fb7c3 21%, #09d4c5 57%, #00ffc8 100%) no-repeat;
+            text-align: center;
+
+            font-size: 16px;
+            line-height: 22px;
+            padding-block: 1rem;
+        }
+
+        .lp-footer p {
+            margin: 0;
+        }
+
+        .lp-footer a {
+            color: #00ECCB !important;
+        }
+
+        @media screen and (min-width: 1500px) {
+
+            span.br-before::before {
+                content: "\a";
+                white-space: pre;
+            }
+
+            span.br-after::after {
+                content: "\a";
+                white-space: pre;
+            }
+        }
+    </style>
+
+    <title>CAPSULE by Pareto Health</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <section class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="nav justify-content-end">
+                            <a class="nav-link social-link" href="https://www.linkedin.com/company/pareto-health/"
+                                target="_blank"><img
+                                    src="https://paretohealth.com/wp-content/uploads/2021/01/LinkedIn_Header.svg"
+                                    alt="LinkedIn"></a><a class="nav-link social-link"
+                                href="https://www.youtube.com/channel/UCk2M8BZ47nNhBqwL2goihqA" target="_blank"><img
+                                    src="https://paretohealth.com/wp-content/uploads/2022/09/YouTube_Header.svg"
+                                    alt="Youtube"></a><a class="nav-link social-link" href="" target="_blank"><img
+                                    src="" alt=""></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+                            <a class="navbar-brand" href="https://paretohealth.com">
+                                <img src="https://storage.pardot.com/1011851/1691404195NVDPgdor/logo_CAPSULE.png"
+                                    alt="ParetoHealth">
+                            </a>
+
+                            <div class="mr-4 d-none d-lg-block">
+                                |
+                            </div>
+                            <div class="d-none d-lg-block">
+                                Streamline Submissions, Accelerate Outcomes
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="main_body">
+
+        <section class="small-hero p-0 m-0">
+            <div class="container-fluid px-0">
+                <div class="background-image"
+                    style="background-image: url('https://storage.pardot.com/1011851/1691464545GvLkrrv0/header_image_right_opt.png');">
+                    <div class="float-wave"
+                        style="background-image: url('https://paretohealth.com/wp-content/themes/pareto/images/svg/header_wave.svg')">
+                    </div>
+                    <div class="hero_content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-xl-7">
+                                    <h1>
+                                        At a Glance
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-xl-8">
+                                    <h2 class="mt-4 mb-0">
+                                        CAPSULE is a new consultant portal that
+                                        <span class="br-before">revolutionizes the submission process.</span>
+                                        <span class="br-before">Accessible on any device, it saves you time and</span>
+                                        <span class="br-before">puts your cases at the front of the underwriting
+                                            queue.</span>
+                                    </h2>
+
+                                    <div class="mt-4 mb-0 d-block d-lg-none">
+                                        <a href="https://paretohealth.com/capsulesupport/" target="_self"
+                                            class="btn btn-green">Sign Up</a>
+                                    </div>
+
+                                    <div class="py-5">
+                                        <span class="underscore_line gradient_line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+
+                        <div>
+                            <h2 class="mb-4">
+                                Benefits of CAPSULE
+                            </h2>
+
+                            <div class="bbox">
+                                <div class="d-flex">
+                                    <div>
+                                        <img src="https://storage.pardot.com/1011851/16914040736zZrY46f/icon_Benefits_of_CAPSULE_1.png"
+                                            alt="">
+                                    </div>
+                                    <div class="pl-4">
+                                        <p>
+                                            <strong>
+                                                Streamline Submissions, Accelerate Outcomes
+                                            </strong>
+                                        </p>
+                                        <p>
+                                            Say goodbye to errors and delays. CAPSULE
+                                            <span class="br-before">streamlines submissions, ensuring faster</span>
+                                            <span class="br-before">outcomes for your clients.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="solid-line-1"></div>
+                            </div>
+
+                            <div class="bbox">
+                                <div class="d-flex">
+                                    <div>
+                                        <img src="https://storage.pardot.com/1011851/1691404100BhtPCzDV/icon_Benefits_of_CAPSULE_2.png"
+                                            alt="">
+                                    </div>
+                                    <div class="pl-4">
+                                        <p>
+                                            <strong>
+                                                Boost Efficiency, Maximize Productivity
+                                            </strong>
+                                        </p>
+                                        <p>
+                                            Experience the power of an all-in-one solution.
+                                            <span class="br-before">CAPSULE consolidates essential tools,</span>
+                                            <span class="br-before">reducing administrative burdens.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="solid-line-2"></div>
+                            </div>
+
+                            <div class="bbox">
+                                <div class="d-flex">
+                                    <div>
+                                        <img src="https://storage.pardot.com/1011851/16914041133LgrdZsy/icon_Benefits_of_CAPSULE_3.png"
+                                            alt="">
+                                    </div>
+                                    <div class="pl-4">
+                                        <p>
+                                            <strong>
+                                                Real-Time Collaboration, Instant Insights
+                                            </strong>
+                                        </p>
+                                        <p>
+                                            Stay in sync with clients and stakeholders.
+                                            <span class="br-before">CAPSULE enables seamless information sharing</span>
+                                            <span class="br-before">and real-time collaboration.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="solid-line-3"></div>
+                            </div>
+
+                            <div class="bbox">
+                                <div class="d-flex">
+                                    <div>
+                                        <img src="https://storage.pardot.com/1011851/16914041252s8qRwzO/icon_Benefits_of_CAPSULE_4.png"
+                                            alt="">
+                                    </div>
+                                    <div class="pl-4">
+                                        <p>
+                                            <strong>
+                                                Empowerment for Success
+                                            </strong>
+                                        </p>
+                                        <p>
+                                            Exceed client expectations and drive
+                                            <span class="br-before">unparalleled results. Embrace the power of</span>
+                                            <span class="br-before">CAPSULE and elevate your benefits</span>
+                                            <span class="br-before">management.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="dark-thumbnail p-4 p-lg-5 mt-5 mt-lg-0 mx-lg-5">
+                            <div>
+                                <img src="https://storage.pardot.com/1011851/1691404195NVDPgdor/logo_CAPSULE.png"
+                                    alt="">
+                            </div>
+
+                            <p class="my-4">
+                                Sign up today and join the growing
+                                <span class="br-before">community of consultants using</span>
+                                <span class="br-before">CAPSULE</span>
+                            </p>
+
+                            <div class="row my-5">
+                                <img class="img-fluid col-6"
+                                    src="https://storage.pardot.com/1011851/1691471316IBIlZcqb/thumbnail_phone_left_opt.png"
+                                    alt="">
+                                <img class="img-fluid col-6"
+                                    src="https://storage.pardot.com/1011851/1691471327sMKnpGWP/thumbnail_phone_right_opt.png"
+                                    alt="">
+                            </div>
+
+                            <div class="mt-5">
+                                <a href="https://paretohealth.com/capsulesupport/" target="_self"
+                                    class="btn btn-green">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-modal pt-5">
+            <div class="container-fluid" style="background-color: #F3F3F3;">
+                <div class="container py-5 px-0">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <img class="img-fluid video-popup-trigger"
+                                src="https://storage.pardot.com/1011851/1691464764eG7CRu1E/video.png" alt=""
+                                data-toggle="modal" data-target="#capsule-video">
+
+                            <div class="modal fade" id="capsule-video" tabindex="-1">
+                                <div class="modal-dialog modal-xl" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">CAPSULE by Pareto Health</h5>
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span>&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <iframe src="//fast.wistia.net/embed/iframe/0v5ase2up0"
+                                                allowtransparency="true" frameborder="0" scrolling="no"
+                                                class="wistia_embed" name="wistia_embed" allowfullscreen
+                                                mozallowfullscreen webkitallowfullscreen oallowfullscreen
+                                                msallowfullscreen height="360"></iframe>
+                                            <script src="//fast.wistia.net/assets/external/E-v1.js" async></script>
+                                            <script>
+                                                window._wq = window._wq || [];
+                                                _wq.push({
+                                                    id: "0v5ase2up0", onReady: function (video) {
+                                                        console.log("I got a handle to the video!", video);
+                                                    }
+                                                });
+                                            </script>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="pt-4 pt-lg-0">
+                                All your consultant needs
+                                <span class="br-before">in one simple package.</span>
+                            </h2>
+                            <div class="py-3">
+                                <span class="underscore_line gradient_line"></span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="video-popup-trigger" data-toggle="modal" data-target="#capsule-video">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                                    </svg>
+                                </div>
+                                <p class="ml-3">
+                                    Watch now to learn more about CAPSULE
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="instruction pt-5 pb-5 pb-lg-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+                        <h2>
+                            CAPSULE login instructions
+                        </h2>
+
+                        <div class="pt-4 pb-5">
+                            <span class="underscore_line gradient_line"></span>
+                        </div>
+
+                        <div class="bbox">
+                            <div class="d-flex">
+                                <div>
+                                    <img src="https://storage.pardot.com/1011851/1691404141TjFaUcq8/icon_CAPSULE_login_instructions_1.png"
+                                        alt="">
+                                </div>
+                                <div class="pl-4">
+                                    <p>
+                                        <strong class="subheading">
+                                            1. Account Set-Up
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        The link in the welcome email will bring you to this screen to set up your
+                                        account.
+                                    </p>
+                                    <p>
+                                        <strong>Email:</strong> Please use the email that the invitation was sent to. A
+                                        security code will be sent to this email on the next screen.
+                                    </p>
+                                    <p>
+                                        <strong>Cell Phone:</strong> Please use your cell phone number–a 6 digit
+                                        security code will be sent to the number you provide.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bbox">
+                            <div class="d-flex">
+                                <div>
+                                    <img src="https://storage.pardot.com/1011851/1691404158mC8DrEt9/icon_CAPSULE_login_instructions_2.png"
+                                        alt="">
+                                </div>
+                                <div class="pl-4">
+                                    <p>
+                                        <strong class="subheading">
+                                            2. Email Confirmation
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        An email will be sent with a 6 digit security code to the email that the account
+                                        was created under.
+                                    </p>
+                                    <p>
+                                        This email will come from <strong>noreply@paretohealth.com</strong>, so please
+                                        check your spam in case it gets sent there.
+                                        <span class="br-before">You can also request an additional code using the
+                                            “Resend Code” button if you do not receive this email.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bbox">
+                            <div class="d-flex">
+                                <div>
+                                    <img src="https://storage.pardot.com/1011851/16914041690HPIqAVu/icon_CAPSULE_login_instructions_3.png"
+                                        alt="">
+                                </div>
+                                <div class="pl-4">
+                                    <p>
+                                        <strong class="subheading">
+                                            3. Login Into Your Account
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        Once you enter your six digit code, the screen will prompt you to login using
+                                        the password
+                                        <span class="br-before">you created when you were setting up your
+                                            account.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bbox">
+                            <div class="d-flex">
+                                <div>
+                                    <img src="https://storage.pardot.com/1011851/1691404181ZZJyyRFb/icon_CAPSULE_login_instructions_4.png"
+                                        alt="">
+                                </div>
+                                <div class="pl-4">
+                                    <p>
+                                        <strong class="subheading">
+                                            4. Need Help?
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        If you need help you can always email <a
+                                            href="mailto:customersupport@paretohealth.com"> Customer Support</a> or
+                                        click the “Need Help” button at the bottom of the login screen.
+                                    </p>
+                                    <p>
+                                        The “Need Help?” button will prompt you to send an email to the above address so
+                                        that our IT team can assist you in your account setup.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq py-lg-5 bg-night text-white half_column_with_image"
+            style="background-image: url('https://storage.pardot.com/1011851/1691484267pElTtWky/capsule_banner_bottom.png');">
+            <div class="container">
+                <div class="row module-content">
+                    <div class="col-lg-6">
+                        <div class="py-5">
+                            <p class="sub-title">
+                                Sign up today and
+                                <span class="br-before">join the growing community</span>
+                                <span class="br-before">of consultants using</span>
+                                <span class="br-before">CAPSULE.</span>
+                            </p>
+                            <div class="mt-4">
+                                <a href="https://paretohealth.com/capsulesupport/" target="_self"
+                                    class="btn btn-green">Sign
+                                    Up</a>
+                            </div>
+                            <div class="py-3">
+                                <a class="faq-link"
+                                    href="https://go.pardot.com/l/1011851/2023-08-07/5x9clc/1011851/1691465220fhSg0eOq/CAPSULE_FAQs.pdf"
+                                    target="_blank">
+                                    Frequently Asked Questions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-small">
+                <img class="img-fluid"
+                    src="https://storage.pardot.com/1011851/16914844778WSgZOCM/capsule_banner_bottom_mobile.png" alt="">
+            </div>
+        </section>
+
+        <section class="bottom-logo bg-night d-block d-lg-none">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://paretohealth.com">
+                    <img src="https://storage.pardot.com/1011851/1691404195NVDPgdor/logo_CAPSULE.png"
+                        alt="ParetoHealth">
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="lp-footer">
+        <div class="container-fluid">
+            <p>
+                FMC Tower, 2929 Walnut Street, Suite 1500, Philadelphia, PA 19104.
+            </p>
+            <p>
+                ©2023 ParetoHealth. All rights reserved. <a href="https://paretohealth.com/privacy-policy/"
+                    target="_blank">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

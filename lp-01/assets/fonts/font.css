@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'MuseoSans_100';
+    font-style: normal;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_100.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_100';
+    font-style: italic;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_100_Italic.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_300';
+    font-style: normal;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_300.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_300';
+    font-style: italic;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_300_Italic.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_500';
+    font-style: normal;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_500.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_500';
+    font-style: italic;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_500_Italic.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_700';
+    font-style: normal;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_700.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_700';
+    font-style: italic;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_700_Italic.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_900';
+    font-style: normal;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_900.otf");
+}
+
+@font-face {
+    font-family: 'MuseoSans_900';
+    font-style: italic;
+    src: url("https://fonts.2xcode.dev/MuseoSans/MuseoSans_900_Italic.otf");
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    src: url("https://fonts.2xcode.dev/MuseoSans/Roboto_Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-style: normal;
+    src: url("https://fonts.2xcode.dev/MuseoSans/Roboto_Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-style: normal;
+    src: url("https://fonts.2xcode.dev/MuseoSans/Roboto_Bold.ttf") format("truetype");
+}
